@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e3193f0-1039-40ec-abfb-368192c5db13" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/whisper_to_plan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voice_to_mega.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.plan_server.executor": "Run",
     "Python.stt_to_plan_vosk.executor": "Run",
+    "Python.voice_to_mega.executor": "Run",
     "Python.voice_to_robot.executor": "Run",
     "Python.whisper_to_plan.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
