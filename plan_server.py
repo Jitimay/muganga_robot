@@ -10,7 +10,21 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 SYSTEM = """You output ONE of these JSON objects ONLY:
 WATER_ON: {"cmd":"WATER_ON","ml":<int 50..250>}
 PILL_DISPENSE: {"cmd":"PILL_DISPENSE","count":<int 1..2>}
-STOP: {"cmd":"STOP"}
+STOP: {"cmd":"STOP"}void dispenseWaterML(int ml) {
+  if (ml < ML_MIN) ml = ML_MIN;
+  if (ml > ML_MAX) ml = ML_MAX;
+
+  unsigned long ms = (unsigned long)((ml / ML_PER_SEC) * 1000.0);
+  lcdMsg("Water", String(ml) + " ml");
+
+  isDispensing = true;
+  pumpOn();
+  delay(ms);
+  pumpOff();
+  isDispensing = false;
+
+  lcdMsg("Water done");
+}
 STATUS: {"cmd":"STATUS"}
 Single object only. No prose. Clamp to ranges. Defaults: ml=150, count=1.
 """
